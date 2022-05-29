@@ -3,7 +3,7 @@ This repository's aim is understanding and originally implementing well-known so
 
 Compilation is done with using cmake.
 
-in order to compile sorting algorithims, you must specify the type of sorting. 
+in order to compile sorting algorithms, you must specify the type of sorting. 
 
 Usage example is like:
 ```sh
