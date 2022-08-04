@@ -15,7 +15,7 @@ void insertionSort(int32_t* pArray, int32_t size) {
         // std::cout << "key is " << pivot << std::endl;
         while(comparedIndex >= 0 && pArray[comparedIndex] > pivot) {
 
-            swap(pArray, compareIndex, compareIndex+1);
+            swap(pArray, comparedIndex, comparedIndex+1);
             comparedIndex--;
             // printArray(pArray, size);
         }
