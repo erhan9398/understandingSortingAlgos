@@ -7,17 +7,21 @@ void swap(int32_t* pArray, int32_t index1, int32_t index2) {
 
 void insertionSort(int32_t* pArray, int32_t size) {
 
+    // comparison always start at 2nd index in array
     for(int32_t index = 1; index < size; index++) {
-
+        
+        // select pivot to compare ones on left
         int32_t pivot = pArray[index];
+        
+        // compare index starts with just left value of pivot
         int32_t comparedIndex = index - 1;
-
-        // std::cout << "key is " << pivot << std::endl;
+        
+        // while pivot is less than left element and compare index is greater than zero, iterate comparison
         while(comparedIndex >= 0 && pArray[comparedIndex] > pivot) {
-
+            // if pivot is less than just left element and comparison is greater than zero, then swap two elements
             swap(pArray, comparedIndex, comparedIndex+1);
+            // decrease comparison index by one
             comparedIndex--;
-            // printArray(pArray, size);
         }
     }
 
