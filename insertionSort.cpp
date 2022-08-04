@@ -1,4 +1,9 @@
 #include "utils.h"
+void swap(int32_t* pArray, int32_t index1, int32_t index2) {
+    int32_t temp = pArray[index1];
+    pArray[index1] = pArray[index2];
+    pArray[index2] = temp;    
+}
 
 void insertionSort(int32_t* pArray, int32_t size) {
 
@@ -10,13 +15,10 @@ void insertionSort(int32_t* pArray, int32_t size) {
         // std::cout << "key is " << pivot << std::endl;
         while(comparedIndex >= 0 && pArray[comparedIndex] > pivot) {
 
-            // std::cout << "comparedIndex is (" << comparedIndex << ")===> ";
-            pArray[comparedIndex + 1] = pArray[comparedIndex];
+            swap(pArray, compareIndex, compareIndex+1);
             comparedIndex--;
             // printArray(pArray, size);
         }
-        pArray[comparedIndex + 1] = pivot;
-        
     }
 
 }
